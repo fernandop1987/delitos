@@ -14,9 +14,9 @@ import dash_bootstrap_components as dbc
 
 
 #### Cargar los datos procesados
-df_merged2 = pd.read_csv("C:/Users/peton/Monitor_elecciones/data/df_merged2.csv")
-df_municipio = pd.read_csv("C:/Users/peton/Monitor_elecciones/data/df_municipio.csv")
-df_departamento = pd.read_csv("C:/Users/peton/Monitor_elecciones/data/df_departamento.csv")
+df_merged2 = pd.read_csv("data/df_merged2.csv")
+df_municipio = pd.read_csv("data/df_municipio.csv")
+df_departamento = pd.read_csv("data/df_departamento.csv")
 
 
 
