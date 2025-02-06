@@ -437,7 +437,8 @@ def update_graph(partido, nivel, click_data, stored_data):
     return scatter_fig, bar_share, bar_variation, clave
 
 
-
+# Render necesita esto
+server = app.server  # ← ¡IMPORTANTE!
 
 # Ejecutar la aplicación
 if __name__ == '__main__':
