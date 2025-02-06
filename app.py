@@ -301,7 +301,7 @@ def update_graph(partido, nivel, click_data, stored_data):
             text=titulo,
             x=0.5,  # Centra el título
             font=dict(size=16, family="Montserrat, sans-serif", color="black", weight="bold"), # Cambia fuente
-            y=0.98 # Ajusta el espacio entre el título y el gráfico
+            y=0.93 # Ajusta el espacio entre el título y el gráfico
     ),
         font=dict(
             family="Montserrat, sans-serif",  # Fuente para todo el gráfico
@@ -318,7 +318,7 @@ def update_graph(partido, nivel, click_data, stored_data):
         legend_title="Región",
         legend_orientation="h",
         legend_y=-0.3,
-        margin=dict(l=20, r=20, t=40, b=40),  # Reducimos márgenes para mobile
+        margin=dict(l=20, r=20, t=60, b=40),  # Reducimos márgenes para mobile
         autosize=True,  # Hace que el gráfico se ajuste automáticamente
         clickmode='event+select',
         shapes=[
@@ -400,11 +400,12 @@ def update_graph(partido, nivel, click_data, stored_data):
                         autosize=True,
                         paper_bgcolor="#FEF9E5",
                         plot_bgcolor="#FEF9E5",
-                        margin=dict(l=20, r=20, t=40, b=40),  
+                        margin=dict(l=20, r=20, t=60, b=40),  
                         font=dict(family="Montserrat, sans-serif", size=12, color="black"),
                         title=dict(
                             text="% votos por partido (2024)",
                             x=0.5,  # Centra el título
+                            y=0.92, # Ajusta el espacio entre el título y el gráfico
                             font=dict(size=16, family="Montserrat, sans-serif", color="black", weight="bold")  # Cambia fuente
     ))  # Ocultar valores del eje X
          
@@ -422,11 +423,12 @@ def update_graph(partido, nivel, click_data, stored_data):
                         autosize=True,
                         paper_bgcolor="#FEF9E5",
                         plot_bgcolor="#FEF9E5",
-                        margin=dict(l=20, r=20, t=40, b=40),
+                        margin=dict(l=20, r=20, t=60, b=40),
                         font=dict(family="Montserrat, sans-serif", size=12, color="black"),
                         title=dict(
                             text="Variación (pp) vs 2019",
                             x=0.5,  # Centra el título
+                            y=0.92, # Ajusta el espacio entre el título y el gráfico
                             font=dict(size=16, family="Montserrat, sans-serif", color="black", weight="bold")  # Cambia fuente
     ))  # Ocultar valores del eje X
     else:
