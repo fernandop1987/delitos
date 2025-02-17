@@ -219,7 +219,6 @@ def update_visuals(selected_year, selected_delito, n_clicks_uruguay, n_clicks_mo
             title=dict(text="Delitos<br>cada 100K/hab.", font=dict(family="Montserrat, sans-serif", size=14, color="#DBD1D8")),
             tickformat=",.0f",  # Formato de los ticks
             tickfont=dict(family="Montserrat, sans-serif", size=12, color="#DBD1D8"),
-            titlefont=dict(family="Montserrat, sans-serif", size=14, color="#DBD1D8"),
             thickness=10,  # Más angosta
             orientation='h',  # Barra horizontal
             x=0.50,  # Ajusta la posición horizontal (0 = izquierda, 1 = derecha)
@@ -269,12 +268,8 @@ def update_visuals(selected_year, selected_delito, n_clicks_uruguay, n_clicks_mo
         coloraxis_showscale=False,  # Quitar la barra de colores
         coloraxis_cmin=ratio_min,
         coloraxis_cmax=ratio_max,
-        title_font=dict(family="Montserrat, sans-serif", size=14, color="#DBD1D8"),
-        title={
-            'text': "Delitos cada 100K/hab.",
-            'x': 0.5 
-            #'y': 0.95
-        },
+        title=dict(text= "Delitos cada 100K/hab.", x= 0.5,font=dict(family="Montserrat, sans-serif", size=14, color="#DBD1D8") 
+        ),
         margin=dict(l=20, r=20, t=60, b=40),
         height=height,
         paper_bgcolor="#1E2A38",
