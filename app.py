@@ -216,7 +216,7 @@ def update_visuals(selected_year, selected_delito, n_clicks_uruguay, n_clicks_mo
         coloraxis_cmin=ratio_min,  # Valor mínimo fijo
         coloraxis_cmax=ratio_max,   # Valor máximo fijo
         coloraxis_colorbar=dict(
-            title="Delitos<br>cada 100K/hab.",
+            title=dict(text="Delitos<br>cada 100K/hab.", font=dict(family="Montserrat, sans-serif", size=14, color="#DBD1D8")),
             tickformat=",.0f",  # Formato de los ticks
             tickfont=dict(family="Montserrat, sans-serif", size=12, color="#DBD1D8"),
             titlefont=dict(family="Montserrat, sans-serif", size=14, color="#DBD1D8"),
