@@ -1,3 +1,29 @@
+# Cargo las librerías necesarias
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import geopandas as gpd
+import plotly.express as px
+from dash import Dash, dcc, html
+from dash.dependencies import Input, Output, State
+import dash_bootstrap_components as dbc
+
+
+############################################################################################################
+
+
+#### Cargar los datos procesados
+df_dep = pd.read_csv("data/df_dep.csv")
+df_barrios = pd.read_csv("data/df_barrios.csv")
+gdf_dep = gpd.read_file("data/gdf_dep.geojson")
+gdf_mvd = gpd.read_file("data/gdf_mvd.geojson")
+
+
+############################################################################################################
+
+
+
 app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 
@@ -263,6 +289,9 @@ def update_visuals(selected_year, selected_delito, n_clicks_uruguay, n_clicks_mo
     
     return map_fig, bar_fig, final_text
 
+
+# Render necesita esto
+server = app.server  # ← ¡IMPORTANTE!
 
 if __name__ == '__main__':
     app.run_server(debug=True)
