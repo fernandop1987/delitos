@@ -98,7 +98,7 @@ app.layout = dbc.Container([
 
     # Visualizaciones: mapa y gráfico de barras en la misma fila
     dbc.Row([
-        dbc.Col(dcc.Graph(id='map_graph', style={'height': '500px'}, config={'scrollZoom':True}), width=12, lg=8),  # Mapa ocupa 8/12 del ancho en pantallas grandes
+        dbc.Col(dcc.Graph(id='map_graph', style={'height': '500px'}, config={'scrollZoom':True}), width=12, lg=8, className="mb-3"),  # Mapa ocupa 8/12 del ancho en pantallas grandes
         dbc.Col(html.Div([
             dcc.Graph(id='bar_graph')  
         ], style={'height': '500px', 'overflowY': 'scroll'}), width=12, lg=4)  
@@ -270,7 +270,7 @@ def update_visuals(selected_year, selected_delito, n_clicks_uruguay, n_clicks_mo
         coloraxis_cmax=ratio_max,
         title=dict(text= "Delitos cada 100K/hab.", x= 0.5,font=dict(family="Montserrat, sans-serif", size=14, color="#DBD1D8") 
         ),
-        margin=dict(l=20, r=20, t=60, b=40),
+        margin=dict(l=20, r=20, t=80, b=40),
         height=height,
         paper_bgcolor="#1E2A38",
         plot_bgcolor="#1E2A38",
